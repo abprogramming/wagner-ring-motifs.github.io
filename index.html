@@ -5,58 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam Berces</title>
     <style>
-        body {
+        body, html {
             margin: 0;
             padding: 0;
-            font-family: Georgia, Times, "Times New Roman", serif; 
-            background-color: #000;
-            color: #fff;
+            height: 100%;
+            font-family: Arial, sans-serif;
         }
-        .container {
+
+        #hero {
+            position: relative;
             width: 100%;
-            margin: 0 auto;
+            height: 100vh;
+            overflow: hidden;
+			background-color: black;
+        }
+
+        #hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #intro {
             text-align: center;
-        }
-        .logo {
-            margin-top: 50px;
-        }
-        .intro {
+			width: 100%;
             background-color: #333;
 			padding: 20px;
-            margin-top: 30px;
-        }
-        .links {
-            background-color: #666;
-            padding: 20px;
-        }
-        .links a {
             color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
+		}
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        #grid-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            width: 80%;
+            height: 80%;
+        }
+
+        .grid-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            overflow: hidden;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .grid-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="fagyhold.png" alt="Logo" style="max-width: 100%;">
-        </div>
-        <div class="intro">
+    <!-- Fullscreen Image Section -->
+    <section id="hero">
+        <a href="https://fagyhold.bandcamp.com/album/snow-and-moonlight-cover-the-track-of-our-horde-on-the-steppe" target="_blank"><img src="fagyhold.jpg" alt="Fullscreen Image"></a>
+    </section>
+
+  <section id="intro">
 			<p>Welcome to my personal website!</p>
             <p>I am a hungarian musician worked in various dark and experimental genres since 2006,<br>
-			including dark ambient, black metal, martial industrial, neofolk, neoclassical, EBM and other underground and electronic genres.</p>
-			 <p>I am also a devout collector and maniac of underground and classical music, I listen mostly to<br>
-			 Richard Wagner and classical music from the romantic and 20th century era; 90's black and heavy metal, Bal-Sagoth and Abigor in the first place;<br>anything from the so called "dark" scene, like 80's goth rock, The Mission, EBM, new wave, Dead Can Dance, Depeche Mode;<br>
-			 industrial pioneers like Laibach and Autopsia; 70's progressive rock, Kraftwerk and Tangerine Dream; and sometimes even lighter electronic genres like acid and IDM.</p>
+			most prominently martial industrial, black metal, dark ambient, neofolk, neoclassical, EBM and other underground and electronic genres.<br>
+			Please use the image links to access my releases from Bandcamp!</p>
+			 <p>I am also a devout collector and maniac of underground and classical music, which is my main inspiration for my works:<br>operas from
+			 Richard Wagner and other classical music, mostly from the romantic and 20th century era; 90's black and heavy metal;<br>anything from the so-called "dark" scene, from 80's goth rock and EBM to post-industrial and neofolk;<br>
+			 70's progressive rock, Kraftwerk and Tangerine Dream; and sometimes even lighter electronic genres like acid and IDM.</p>
+    </section>
+
+    <!-- Grid Section -->
+    <section id="grid-section">
+        <div class="grid-container">
+            <div class="grid-item"><a href="https://gradualhaterecords.bandcamp.com/album/ultrakonservativ-schlagerparade" target="_blank"><img src="kr4.jpg" alt="Image 1"></a></div>
+            <div class="grid-item"><a href="https://thetruemorkskog.bandcamp.com/album/autumn-moods-the-lost-compositions" target="_blank"><img src="ms2.jpg"></a></div>
+            <div class="grid-item"><a href="https://gradualhaterecords.bandcamp.com/album/une-foi-dacier" target="_blank"><img src="kr3.jpg"></a></div>
+            <div class="grid-item"><a href="https://thetruemorkskog.bandcamp.com/album/ukiaq" target="_blank"><img src="ms1.jpg"></a></div>
+            <div class="grid-item"><a href="https://sincronicalabel.bandcamp.com/album/adam-berces-posztapokaliptikus-almanach-sincro-001" target="_blank"><img src="ab.jpg"></a></div>
+            <div class="grid-item"><a href="https://gradualhaterecords.bandcamp.com/album/offenbarung" target="_blank"><img src="kr1.jpg"></a></div>
+            <div class="grid-item"><a href="https://gradualhaterecords.bandcamp.com/album/falanx" target="_blank"><img src="kr2.jpg"></a></div>
+            <div class="grid-item"><a href="https://thetruemorkskog.bandcamp.com/album/dreams-of-black-mountains-a-tribute-to-h-p-lovecraft" target="_blank"><img src="ms3.jpg"></a></div>
         </div>
-        <div class="links">
-			<p>LINKS</p>
-			<p>My current project (symphonic black metal) is: <a href="https://fagyhold.bandcamp.com/" target="_blank">FAGŸHOLD</a><p>
-            <a href="https://thetruemorkskog.bandcamp.com/" target="_blank">Mørk Skog (dark ambient)</a>
-            <a href="https://gradualhaterecords.bandcamp.com/" target="_blank">GH Records (label for Kraschau releases)</a>
-            <a href="https://sincronicalabel.bandcamp.com/album/adam-berces-posztapokaliptikus-almanach-sincro-001" target="_blank">Posztapokaliptikus Almanach 12"</a>
-			<a href="https://binaryacid.bandcamp.com/" target="_blank">Binary Acid (acid techno)</a>
-        </div>
-    </div>
+    </section>
 </body>
 </html>
